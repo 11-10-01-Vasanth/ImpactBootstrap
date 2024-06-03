@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Bootstrap Template Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon"
+      href="data:image/jpeg;base64,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">
+  </head>
+  <body>
+    <section class="d-flex text-light"
+      style="background-color: #00796B; height: 40px;">
+      <div
+        class="container align-items-center d-flex justify-content-center justify-content-md-between">
+        <div class="underline">
+          <i class="bi bi-envelope"></i>
+          <a class="text-light div1" href="mailto: contact@example.com">
+            contact@example.com </a>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <div> <i class="bi bi-phone"></i>
+          <span> +1 5589 55488 55 </span>
+        </div>
+        <div class="col d-none d-md-block text-end" style="opacity: 0.6;">
+          <span><a class="text-light" href><i
+                class="bi bi-twitter"></i></a></span>
+          <span class="ms-3"><a class="text-light" href><i
+                class="bi bi-facebook"></i></a></span>
+          <span class="ms-3"><a class="text-light" href><i
+                class="bi bi-instagram"></i></a></span>
+          <span class="ms-3"><a class="text-light" href><i
+                class="bi bi-linkedin"></i></a></span>
+        </div>
+      </div>
+    </section>
+
+    <header style="background-color: #008374; height: 60px;"
+      class="d-flex align-item-center  sticky-top">
+      <div
+        class="container-xl d-flex align-item-center justify-content-between">
+        <a href class="text-decoration-none text-light">
+          <h2>Impact<b class="fs-1 text-danger">.</b></h2>
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mynav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynav">
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-light"
+                    aria-current="page" href="#Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#About">About</a></li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#Services">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#Portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#Team">Team</a></li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#Blog">Blog</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-light" href="#"
+                    id="navbarDropdown" data-bs-toggle="dropdown">Dropdown</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Drop down</a></li>
+                    <li><a class="dropdown-item" href="#">Deep drop
+                        down</a></li>
+                    <li><a class="dropdown-item" href="#">Drop down</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link text-light"
+                    href="#Contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sec-height" style="background-color: #008374;">
+      <div class="container mt-5">
+        <div class="row gy-5 d-flex align-items-center ">
+          <div
+            class="col-lg-6 text-light order-2 order-lg-1 text-center text-md-start">
+            <h1><b> Welcome to Impact </b> </h1> <br>
+            <span>Sed autem laudantium dolores. Voluptatem itaque ea consequatur
+              eveniet. Eum quas beatae cumque eum quaerat.</span> <br>
+            <div
+              class="mt-5 d-flex justify-content-center align-items-center justify-content-lg-start">
+
+              <a
+                class="rounded-pill shadow text-decoration-none text-light getstart">Get
+                Started</a>
+
+              <a href="https://www.youtube.com/watch?v=Po3jStA673E"
+                class="d-flex align-items-center text-decoration-none text-center"
+                data-toggle="lightbox"> <span><i
+                    class="bi bi-play-circle text-light ms-5 fs-3"
+                    style="opacity: 0.6;"></i></span>
+                <span class="text-light ms-3">Watch Video</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-lg-6 d-flex align-items-center order-1 order-lg-2">
+            <img
+              src="https://bootstrapmade.com/demo/templates/Impact/assets/img/hero-img.svg"
+              class="img-fluid" alt>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-fluid box1">
+      <div class="container">
+        <div class="row text-light rowicon">
+          <div
+            class="col-12 col-md-6 col-lg-2 border-0 rounded-3 text-center shadow icon">
+            <div class="mt-4">
+              <i class="bi bi-easel fs-1" style="opacity:.6;"></i>
+            </div>
+            <h4>Lorem Ispum</h4>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-2 border-0 rounded-3 text-center shadow icon"><div
+              class="mt-4"><i class="bi bi-gem fs-1"
+                style="opacity:.6;"></i></div>
+            <h4>Sed ut perspiciatis</h4></div>
+          <div
+            class="col-12 col-md-6 col-lg-2 border-0 rounded-3 text-center shadow icon"><div
+              class="mt-4"><i class="bi bi-geo-alt fs-1"
+                style="opacity:.6;"></i></div>
+            <h4>Magni Dolars</h4></div>
+          <div
+            class="col-12 col-md-6 col-lg-2 border-0 rounded-3 text-center shadow icon"><div
+              class="mt-4"><i class="bi bi-command fs-1"
+                style="opacity:.6;"></i></div>
+            <h4>Nemo Enim</h4></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="sectionheader text-center mt-5">
+        <h2>About Us</h2>
+        <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro
+          incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 col-12">
+          <h2><b>Voluptatem dignissimos provident quasi corporis</b></h2>
+          <img class="rounded-3 img-fluid mb-3"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/about.jpg"
+            alt> <br>
+          <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis
+            quod nisi et. Placeat debitis quia recusandae odit et consequatur
+            voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
+          <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut
+            cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus
+            et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus
+            nobis tempore doloribus debitis explicabo similique sit. Accusantium
+            sed ut omnis beatae neque deleniti repellendus.</p>
+        </div>
+        <div class="col-12 col-lg-6 justify-content-lg-start">
+          <span><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.</i></span> <br>
+          <ul class="list-unstyled mt-3">
+            <li><i class="bi bi-check-circle-fill" style="color: #00796B;">
+                &nbsp;</i> Ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</li>
+            <li><i class="bi bi-check-circle-fill" style="color: #00796B;">
+                &nbsp;</i> Duis aute irure dolor in reprehenderit in voluptate
+              velit.
+            </li>
+            <li><i class="bi bi-check-circle-fill" style="color: #00796B;">
+                &nbsp;</i> Ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              trideta storacalaperda mastiro dolore eu fugiat nulla
+              pariatur.</li>
+          </ul>
+          <span>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore
+            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident
+          </span>
+          <img
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/about-2.jpg"
+            alt="imgNotFound" class="img-fluid mt-4 rounded-3 mb-5">
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-4.png"
+            alt></div>
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-2.png"
+            alt></div>
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-3.png"
+            alt></div>
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-1.png"
+            alt></div>
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-8.png"
+            alt></div>
+        <div class="col-4 col-lg-2"><img class="img-fluid imgsize"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/clients/client-7.png"
+            alt></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-6">
+          <img class="img-fluid img2"
+            src="https://bootstrapmade.com/demo/templates/Impact/assets/img/stats-img.svg"
+            alt>
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center border-bottom"><h1
+              style="color: #008374;">232</h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p><b>Happy Clientsp</b><span> consequuntur quae diredo para
+                mesta</p></div>
+            <div class="d-flex align-items-center border-bottom mt-4"><h1
+                style="color: #008374;">521</h1>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><b> Projects </b>adipisci
+                atque cum quia aut</p></div>
+            <div class="d-flex align-items-center border-bottom mt-4"><h1
+                style="color: #008374;">453</h1>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><b>Happy Clients</b> consequuntur
+                quae diredo para mesta </p></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-5">
+        <div class="container text-center text-light">
+          <div class="row align-items-center justify-content-center img-fluid"
+            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsqcleca_7WkG6-awRdZK2L-tG7gJ8359aGg&usqp=CAU');
+                                                                              height: 500px; border-radius: 20px; background-repeat: no-repeat; background-size: cover;">
+            <a href class="text-light fs-1"><i
+                class="bi bi-play-circle-fill"></i></a>
+            <h2>Call To Action</h2>
+            <span>Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.</span>
+            <button class="btn rounded-pill text-center text-light"
+              style="width: 150px; height: 50px; border: 2px solid white">Call
+              To Action</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionheader text-center mt-5 p-4"
+        style="background-color: rgb(244, 243, 243);">
+        <div class="container-fluid">
+          <div class="">
+            <h2>Our Services</h2>
+            <p>Aperiam dolo rum et et wuia molestias qui eveniet numquam nihil
+              porro incidunt dolores placeat sunt id nobis omnis tiledo stran
+              delop</p>
+            <div class="row justify-content-md-evenly gap-3 mt-5">
+              <div
+                class="col-lg-3 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-broadcast fs-1"></i> <br><h3
+                    class="fs-4">Nesicuint mete</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-broadcast fs-1"></i> <br><h3
+                    class="fs-4">Eosle Commodi</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-easel fs-1"></i> <br><h3
+                    class="fs-4">Ledo Markt</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-chat-right-text fs-1"></i>
+                  <br><h3 class="fs-4">Aprisis Commodit</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+              <div
+                class="col-lg-3 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-broadcast fs-1"></i> <br><h3
+                    class="fs-4">Vellit Doloremque</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-4 col-md-6 border-0 servicebox text-start shadow">
+                <div class="items"><i class="bi bi-broadcast fs-1"></i> <br><h3
+                    class="fs-4">Dolori Architecto</h3>
+                  <br>
+                  <p>A paragraph is defined as “a group of sentences or a single
+                    sentence that forms a unit” (Lunsford and Connors 116).</p>
+                  <br>
+                  <span style="color: #00796B;">Read More <i
+                      class="bi bi-arrow-right"></i></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sectionheader mt-5 p-5">
+          <div class="container text-center">
+            <h2>Testimonials</h2>
+            <p>Voluptatem quibusdam ut ullam perferendis repellat non ut
+              consequuntur est eveniet deleniti fignissimos eos quam</p>
+
+            <div class="row">
+              <div class="col-lg-4 servicebox text-lg-start">
+                <div class="rounded-3 shadow p-5">
+                  <div class="align-items-center mb-3 text-start">
+                    <img class="rounded-pill img-fluid float-start"
+                      src="https://bootstrapmade.com/demo/templates/Impact/assets/img/testimonials/testimonials-5.jpg"
+                      alt width="100">
+                    <span class="ms-3"><b>John</b></span> <br>
+                    <span class="ms-3">Entreprenur</span> <br>
+                    <i class="bi bi-star-fill ms-3"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i>
+                  </div>
+                  <br><br>
+                  <div>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                    <span>A paragraph is defined as “a group of sentences or a
+                      single sentence that forms a unit” (Lunsford and Connors
+                      116).</span>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 servicebox text-lg-start">
+                <div class="rounded-3 shadow p-5">
+                  <div class="align-items-center mb-3 text-start">
+                    <img class="rounded-pill img-fluid float-start"
+                      src="https://bootstrapmade.com/demo/templates/Impact/assets/img/testimonials/testimonials-2.jpg"
+                      alt width="100">
+                    <span class="ms-3"><b>Lara</b></span> <br>
+                    <span class="ms-3">Designer</span> <br>
+                    <i class="bi bi-star-fill ms-3"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i>
+                  </div>
+                  <br><br>
+                  <div>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                    <span>A paragraph is defined as “a group of sentences or a
+                      single sentence that forms a unit” (Lunsford and Connors
+                      116).</span>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 servicebox text-lg-start">
+                <div class="rounded-3 shadow p-5">
+                  <div class="align-items-center mb-3 text-start">
+                    <img class="rounded-pill img-fluid float-start"
+                      src="https://bootstrapmade.com/demo/templates/Impact/assets/img/testimonials/testimonials-4.jpg"
+                      alt width="100">
+                    <span class="ms-3"><b>Saul</b></span> <br>
+                    <span class="ms-3">CEO</span> <br>
+                    <i class="bi bi-star-fill ms-3"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i>
+                  </div>
+                  <br><br>
+                  <div>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                    <span>A paragraph is defined as “a group of sentences or a
+                      single sentence that forms a unit” (Lunsford and Connors
+                      116).</span>
+                    <i style="color: #00796B;" class="bi bi-music-note"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        style="background-color: rgb(244, 243, 243);">
+        <div class="sectionheader mt-5 p-5 text-center">
+          <div class="container">
+            <h2>Portfolio</h2>
+            <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi
+              llum nostrum enim velit qui ut et autem uia reprehenderit sunt
+              deleniti</p>
+            <div class="row">
+              <div class="col">
+                <span class="portfolio" href>All</span> &nbsp;&nbsp;&nbsp;
+                <span class="portfolio" href>App</span> &nbsp;&nbsp;&nbsp;
+                <span class="portfolio" href>Product</span> &nbsp;&nbsp;&nbsp;
+                <span class="portfolio" href>Branding</span> &nbsp;&nbsp;&nbsp;
+                <span class="portfolio" href>Books</span> &nbsp;&nbsp;&nbsp;
+              </div>
+            </div>
+            <div
+              class="row mt-5 d-flex justify-content-center justify-content-evenly">
+              <div class="col">
+                <div class="card rounded-3 shadow cardz" style="width: auto">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/app-1.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow cardz" style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/product-1.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow cardz" style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/branding-1.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/books-1.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/app-2.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/product-2.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/branding-2.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/books-2.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/app-3.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/product-3.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/branding-3.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-lg-4">
+                <div class="card rounded-3 shadow mt-5 cardz"
+                  style="width: auto;">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Impact/assets/img/portfolio/books-3.jpg"
+                    class="card-img-top img-fluid" alt="...">
+                  <div class="card-body text-start">
+                    <p class="card-text">App 1 </p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet
+                      consectetur</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+  </html>

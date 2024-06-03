@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.div1
+{
+    text-decoration: none;
+}
+.underline:hover{
+    text-decoration: underline;
+}
+.div2
+{
+    text-decoration: none;
+}
+.getstart
+{
+    padding: 10px 50px;
+    width: 190px;
+    height: 53px;
+    border: 2px solid #319B8F;
+    background-color: #1A9082;
+    
+}
+.getstart:hover
+{
+    border: 2px solid whitesmoke;
+    transition: 1s ease;
+}
+.sec-height
+{
+    height: 750px;
+}
+@media screen and (max-width: 992px) 
+{
+    .box1
+    {
+        height: 500px;
+        background-color: #008374;
+    }
+}
+@media screen and (max-width: 768px) 
+{
+    .box1
+    {
+        height: 900px;
+        background-color: #008374;
+    }
+}
+@media only screen and (min-width: 992px) 
+{
+    .box1
+    {
+        position: relative;
+        margin-top: -120px;
+    }
+}
+@media only screen and (max-width: 992px) 
+{
+    .img2
+    {
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 992px) 
+{
+    .servicebox
+    {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 992px) 
+{
+    .rowicon
+    {
+        row-gap: 20px;
+    }
+}
+.rowicon
+{
+    display: flex;
+    justify-content: space-between;
+}
+.imgsize
+{
+    width: 100px;
+    transition:transform 1s;
+}
+.imgsize:hover
+{
+    transform: translateY(30px);
+}
+.yout:hover
+{
+    color: white;
+}
+.icon
+{
+    height: 220px; 
+    padding: 20px;
+    background-color: #319B8F;
+}
+
+.icon:hover
+{
+    cursor: pointer;
+    background-color: #3d9b90;
+}
+.sectionheader h2::after
+{
+    content: '';
+    width: 50px;
+    display: block;
+    background-color: #1A9082;
+    height: 3px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.items h3
+{
+    border-bottom: 3px solid #eeeeee;
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.items h3:hover
+{
+    border-bottom: 3px solid #008374;
+}
+
+.servicebox
+{
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+}
+.portfolio
+{
+    text-decoration: none;
+}
+.portfolio:hover
+{
+    cursor: pointer;
+    color: #008374;
+}
+.cardz
+{
+    overflow: hidden;
+}
+.cardz img
+{
+    transition: all 1s;
+}
+.cardz img:hover
+{
+    /* backface-visibility: hidden; */
+    transform: scale(0.9);
+    /* position: relative; */
+}
